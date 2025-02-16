@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lunathi Web Solutions</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #000;
+      color: #fff;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 100px;
+      margin-right: 20px;
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .logo-text .tagline {
+      font-size: 12px;
+      color: #a5a5a5;
+    }
+
+    .nav {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .nav li {
+      margin: 0 15px;
+    }
+
+    .nav a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .nav a:hover {
+      text-decoration: underline;
+    }
+
+    .cta-button {
+      padding: 10px 20px;
+      background-color: #28a745;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .cta-button:hover {
+      background-color: #218838;
+    }
+
+    .menu-icon {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-icon div {
+      width: 25px;
+      height: 3px;
+      background-color: #fff;
+      margin: 4px 0;
+    }
+
+    @media (max-width: 768px) {
+      .nav {
+        display: none;
+        flex-direction: column;
+        background-color: #000;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 150px;
+        border: 1px solid #fff;
+      }
+
+      .nav.active {
+        display: flex;
+      }
+
+      .menu-icon {
+        display: flex;
+      }
+    }
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      flex-direction: column; 
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('hero-background.jpg') no-repeat center center/cover;
+      color: #fff;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+
+    .hero p {
+      font-size: 1.5rem;
+      margin: 20px 0;
+    }
+
+    .hero .cta-button {
+      font-size: 1.2rem;
+    }
+
+    /* Section Styles */
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .services {
+      background-color: #f9f9f9;
+    }
+
+    .services h2, .about h2, .contact h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .services .service {
+      display: inline-block;
+      width: 200px;
+      margin: 20px;
+      text-align: center;
+    }
+
+    .services .service img {
+      width: 100px;
+      height: 100px;
+    }
+
+    .about {
+      background-color: #fff;
+    }
+
+    .contact form {
+      max-width: 400px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact form input, .contact form textarea, .contact form button {
+      margin: 10px 0;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    /* Footer Section */
+    .footer {
+      background-color: #000;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .footer .social-icons {
+      margin: 10px 0;
+    }
+
+    .footer .social-icons a {
+      margin: 0 10px;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .footer .social-icons a:hover {
+      color: #28a745;
+    }
+
+    .footer p {
+      margin: 5px 0;
+      font-size: 0.9rem;
+    }
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    .services .service i {
+  color: #28a745;
+  margin-bottom: 10px;
+}
+
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <img src="image/globe logo.jpg" alt="Lunathi Web Solutions Logo">
+      <div class="logo-text">
+        <h1>Lunathi Web Solutions</h1>
+        <span class="tagline">Your Partner in Digital Growth</span>
+      </div>
+    </div>
+    <nav>
+      <ul class="nav">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="#contact" class="cta-button">Get a Quote</a>
+    <div class="menu-icon" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </header>
+
+  <section class="hero" id="home">
+    <h1>Welcome to Lunathi Web Solutions</h1>
+    <p>Your one-stop solution for Website Creation, Hosting, Maintenance, and Updates</p>
+    <a href="#services" class="cta-button">Explore Our Services</a>
+  </section>
+
+  <section class="services" id="services">
+  <h2>Our Services</h2>
+  <div class="service">
+    <i class="fas fa-laptop-code fa-3x"></i>
+    <img src="image/pngtree-vector-web-icon-png-image.jpg" alt="Website Creation Icon">
+    <h3>Website Creation</h3>
+    <p>We create the website tailored to your needs and intentions. A client-driven service to meet your goals.</p>
+    
+  </div>
+  <div class="service">
+    <i class="fas fa-cloud fa-3x"></i>
+    <img src="image/pngtree-storage-hosting-icon-png-image.jpg" alt="Hosting Icon">
+    <h3>Website Hosting</h3>
+    <p>We host your website, ensuring it is always available to your target audience.</p>
+  </div>
+  <div class="service">
+    <i class="fas fa-tools fa-3x"></i>
+    <img src="image/6900676.png" alt="Maintenance Icon">
+    <h3>Website Maintenance</h3>
+    <p>Our maintenance service ensures your website remains secure and up-to-date.</p>
+  </div>
+  <div class="service">
+    <i class="fas fa-sync fa-3x"></i>
+    <img src="image/images.png" alt="Updates Icon">
+    <h3>Website Updates</h3>
+    <p>We keep your content fresh and relevant with regular updates as per your needs.</p>
+  </div>
+  
+
+
+
+
+</section>
+
+
+  <section class="about" id="about">
+    <h2>About Us</h2>
+    <p>At Lunathi Web Solutions, we are committed to helping businesses grow digitally. Our mission is to provide seamless and client-focused web services that drive results.</p>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <form action="#">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+    <p>Email: scelomz47@gmail.com</p>
+    <p>Phone: 076 751 0614</p>
+    <p>Address: 9 Anton Lembede</p>
+    <p>WhatsApp: <a href="https://wa.me/+27767510614">Chat with us on WhatsApp</a></p>
+  </section>
+
+  <footer class="footer">
+    <div class="social-icons">
+      <a href="#">Facebook</a>
+      <a href="#">Twitter</a>
+      <a href="#">LinkedIn</a>
+    </div>
+    <p>&copy; 2025 Lunathi Web Solutions. All rights reserved.</p>
+    <p>Designed with care to help your business grow.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.querySelector('.nav');
+      nav.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
